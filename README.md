@@ -1,5 +1,3 @@
-INITIAL COMMIT
-
 # Server-Testing
 
 ## Topics

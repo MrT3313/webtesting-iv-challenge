@@ -2,6 +2,7 @@
     const express = require('express')
 
 // ROUTERS
+    const usersRouter = require('./routes/usersRouter.js')
 
 // SERVER
     const server = express()
@@ -13,6 +14,7 @@
     })
 
 // INDIVIDUAL ROUTES
+    server.use('/api/users', usersRouter)
 
 // EXPORTS
     module.exports = server

@@ -3,12 +3,6 @@
 	"version": "1.0.0",
 	"description": "Server Testing Project",
 	"main": "server.js",
-	"scripts": {
-		"test": "jest --watch --verbose"
-	},
-	"jest": {
-		"testEnvironment": "node"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/LambdaSchool/Server-Testing.git"
@@ -20,11 +14,23 @@
 		"url": "https://github.com/LambdaSchool/Server-Testing/issues"
 	},
 	"homepage": "https://github.com/LambdaSchool/Server-Testing#readme",
+	"scripts": {
+		"test": "cross-env DB_ENV=testing jest --watch --verbose",
+		"server": "nodemon index.js"
+	},
 	"devDependencies": {
 		"jest": "^23.6.0",
-		"supertest": "^3.3.0"
+		"supertest": "^3.3.0",
+		"nodemon": "^1.19.1",
+		"cross-env": "^5.2.0"
 	},
 	"dependencies": {
-		"express": "^4.16.4"
+		"dotenv": "^8.0.0",
+		"express": "^4.16.4",
+		"knex": "^0.18.0",
+		"sqlite3": "^4.0.9"
+	},
+	"jest": {
+		"testEnvironment": "node"
 	}
 }
